@@ -14,7 +14,7 @@ namespace ProductsOnlineShop.Services
         public T ProductsInfo<T>()
         {
             var webClient = new WebClient();
-            var json = webClient.DownloadString(@"C:\Users\Кирил\source\repos\ProductsOnlineShop\ProductsOnlineShop\wwwroot\lib\Products.json\productsInformation.json");
+            var json = webClient.DownloadString(@"https://raw.githubusercontent.com/kiril24us/ProductsOnlineShop/master/ProductsOnlineShop/wwwroot/lib/Products.json/productsInformation.json");
             var products = JsonConvert.DeserializeObject<T>(json);
             return products;
         }
